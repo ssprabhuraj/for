@@ -1,4 +1,4 @@
-{
+const data = {
   "name": "Prabhu Raj S",
   "contact": {
     "email": "ssprabhuraj@gmail.com",
@@ -47,4 +47,29 @@
   "languages": ["English", "Tamil","Telugu(speak)"]
   
  
+
 }
+
+console.log("Using for loop:");
+for (let i = 0; i < data.skills.length; i++) {
+  console.log(data.skills[i]);
+}
+
+console.log("Using for...in loop:");
+for (const key in data) {
+  if (data.hasOwnProperty(key)) {
+    console.log(key, ":", data[key]);
+  }
+}
+
+
+console.log("Using for...of loop:");
+for (const education of data.education) {
+  console.log(education);
+}
+
+
+console.log("Using forEach loop:");
+data.experience.forEach((job) => {
+  console.log(job);
+});
